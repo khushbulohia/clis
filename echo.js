@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
 require('./helper')
-let fs = require('fs').promise
 
 function* echo() {
-    // Use 'yield' in here
-    // Your implementation here
-    console.log(yield fs.readFile(__filename, console.log))
+   var data = process.argv[2] ? process.argv[2] : 'Default content: Hello World'
+    process.stdout.write(data + '\n')
 }
 
 module.exports = echo

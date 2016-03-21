@@ -6,7 +6,7 @@ require('trycatch').configure({'long-stack-traces': true})
 require('songbird')
 require('safeguards')
 
-let co = require('co')
+var co = require('co')
 
 process.on('uncaughtException', logError)
 
